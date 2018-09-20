@@ -1,13 +1,15 @@
 // Update with your config settings.
 
-module.exports = {
+require('dotenv').config();
 
+module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgresql://localhost/friendfield'
+    connection: 'postgres://localhost/friendfield'
   },
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL
-}}
+    connection: process.env.DATABASE_URL + '?ssl=true'
+  }
+};
