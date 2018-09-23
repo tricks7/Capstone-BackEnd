@@ -15,6 +15,6 @@ exports.seed = function(knex, Promise) {
         username: 'alex',
         password: bcrypt.hashSync('alexmart05', 10)
       }];
-      return knex('user').insert(users);
+      return knex('users').insert(users);
     });
 };
